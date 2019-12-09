@@ -17,18 +17,18 @@ void ofApp::draw()
     
     if (ofGetMousePressed())
     {
-        if (currentbrush == 'c')
+        if (currentBrush == 'c')
         {
             ofDrawCircle(mouseX, mouseY, brushSize);
         }
         else if (currentBrush == 't')
         {
-            ofDrawTriance(mouseX, mouseY,
-                          mouseX -10, mouseY+10
+            ofDrawTriangle(mouseX, mouseY,
+                          mouseX -10, mouseY+10,
                           mouseX-10, mouseY +10);
         }
         else if (currentBrush == 's')
-            ofDrawRectangle(mouseX - brushSize/2, mouseY - brushSize/2, <#float y1#>, <#float w#>, <#float h#>)
+            ofDrawRectangle(mouseX - brushSize/2, mouseY - brushSize/2, 0, 0, 0);
         }
     }
 //    ofDrawCircle(ofGetMouseX(), ofGetMouseY(), brushSize);
@@ -56,7 +56,7 @@ void ofApp::draw()
 //    ofDrawTriangle(ofGetMouseX(), ofGetMouseY(), ofGetMouseX(), ofGetMouseY(), 0, 20);
 //    }
     
-}
+
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -71,12 +71,12 @@ void ofApp::keyPressed(int key){
         brushSize += 1;
         brushSize = ofClamp(brushSize,1, 100);
     }
-    else if 
+    else
+    {
         
     std::string currentBrush = "square";
     
-    
-    
+    }
     
     
 //
@@ -164,6 +164,6 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
