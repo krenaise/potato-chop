@@ -25,6 +25,7 @@ void ofApp::draw()
 //        ofDrawCircle(ofGetMouseX(), ofGetMouseY(), 50, 50);  // Draw a 50 x 50 rect centered over the mouse
 //    }
     
+
     if (ofGetMousePressed(OF_MOUSE_BUTTON_LEFT)) {  // If the left mouse button is pressed...
         if (currentBrush == 0){
             ofSetRectMode(OF_RECTMODE_CENTER);
@@ -75,13 +76,16 @@ void ofApp::draw()
                 ofSetColor(color);
                 ofDrawLine(ofGetMouseX(), ofGetMouseY(), ofGetMouseX()+xOffset, ofGetMouseY()+yOffset);
             }
+
         }
     }
     
+
     if (ofGetMousePressed(OF_MOUSE_BUTTON_RIGHT)) {  // If the right mouse button is pressed...
         ofBackground(0);  // Draw a black background over the screen
     }
 }
+
 
 
 
@@ -98,6 +102,7 @@ void ofApp::keyPressed(int key){
         brushSize += 5;
         brushSize = ofClamp(brushSize,25, 100);
     }
+
     else if (key == 'b')
     {
         currentBrush = (currentBrush + 1) % 3;
@@ -123,6 +128,7 @@ void ofApp::keyPressed(int key){
         
     } else if (key == 'e') {
         ofBackground(0);  // Draw a black background over the screen
+
     }
     
     
