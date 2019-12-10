@@ -23,9 +23,14 @@ class ofApp : public ofBaseApp{
         void gotMessage(ofMessage msg);
     
     
-    int currentBrush = 'c';
+
+    int currentBrush = 0;
+    int colorIndex = 0;
     float brushSize = 10;
-        
+    
+    ofColor color = ofColor::white;
+    
+
     float mouseX = ofGetMouseX();
     float mouseY = ofGetMouseY();
     ofPolyline line;
